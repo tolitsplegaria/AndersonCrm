@@ -55,7 +55,7 @@ namespace AndersonCRMFunction
         public List<Employee> ReadPeripheralHistory(int peripheralId, string sortBy)
         {
             List<EEmployee> eEmployees = _iDEmployee.Read<EEmployee>(a => a.PeripheralHistories.Any(b => b.PeripheralId == peripheralId), sortBy);
-            return Employees(eEmployees);     
+            return Employees(eEmployees);
         }
 
         #endregion
@@ -132,7 +132,7 @@ namespace AndersonCRMFunction
         {
             Employee returnEmployee = new Employee
             {
-               
+
                 CreatedDate = eEmployee.CreatedDate,
                 DateHired = eEmployee.DateHired,
                 DateStarted = eEmployee.DateStarted,
@@ -150,7 +150,7 @@ namespace AndersonCRMFunction
                 Email = eEmployee.Email,
                 FirstName = eEmployee.FirstName,
                 LastName = eEmployee.LastName,
-                MiddleName = eEmployee.MiddleName           
+                MiddleName = eEmployee.MiddleName
             };
             return returnEmployee;
         }
