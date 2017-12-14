@@ -46,11 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FDepartment.cs" />
+    <Compile Include="FEmployeeNumber.cs" />
     <Compile Include="FEmployeeTeam.cs" />
     <Compile Include="FEmployeeDepartment.cs" />
     <Compile Include="FPeripheralType.cs" />
     <Compile Include="FJobTitle.cs" />
     <Compile Include="IFDepartment.cs" />
+    <Compile Include="IFEmployeeNumber.cs" />
     <Compile Include="IFEmployeeTeam.cs" />
     <Compile Include="IFEmployeeDepartment.cs" />
     <Compile Include="IFPeripheralType.cs" />

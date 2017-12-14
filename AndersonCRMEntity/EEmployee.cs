@@ -9,6 +9,7 @@ namespace AndersonCRMEntity
     [Table("Employee")]
     public class EEmployee: EBase
     {
+        
         public DateTime DateHired { get; set; }
         public DateTime DateStarted { get; set; }
         public DateTime? DateEnded { get; set; }
@@ -23,6 +24,8 @@ namespace AndersonCRMEntity
         public int ManagerEmployeeId { get; set; }
 
         [StringLength(50)]
+        public string EmployeeNumber { get; set; }
+        [StringLength(50)]
         public string Email { get; set; }
         [StringLength(250)]
         public string FirstName { get; set; }        
@@ -34,7 +37,7 @@ namespace AndersonCRMEntity
         public virtual ECompany Company { get; set; }
         public virtual EJobTitle JobTitle { get; set; }
         public virtual ETeam Team { get; set; }
-
+        
         public virtual ICollection<EEmployeeDepartment> EmployeeDepartments { get; set; }
         public virtual ICollection<EEmployeeTeam> EmployeeTeams { get; set; }
         public virtual ICollection<EPeripheral> Peripherals { get; set; }
