@@ -88,6 +88,7 @@ namespace AndersonCRMFunction
                 DateEnded = a.DateEnded,
                 UpdatedDate = a.UpdatedDate,
 
+                EmployeeNumber = a.EmployeeNumber,
                 CompanyId = a.CompanyId,
                 CreatedBy = a.CreatedBy,
                 EmployeeId = a.EmployeeId,
@@ -112,6 +113,7 @@ namespace AndersonCRMFunction
                 DateEnded = employee.DateEnded,
                 UpdatedDate = employee.UpdatedDate,
 
+                EmployeeNumber = employee.EmployeeNumber,
                 CompanyId = employee.CompanyId,
                 CreatedBy = employee.CreatedBy,
                 EmployeeId = employee.EmployeeId,
@@ -130,12 +132,14 @@ namespace AndersonCRMFunction
         {
             Employee returnEmployee = new Employee
             {
+
                 CreatedDate = eEmployee.CreatedDate,
                 DateHired = eEmployee.DateHired,
                 DateStarted = eEmployee.DateStarted,
                 DateEnded = eEmployee.DateEnded,
                 UpdatedDate = eEmployee.UpdatedDate,
 
+                EmployeeNumber = eEmployee.EmployeeNumber,
                 CompanyId = eEmployee.CompanyId,
                 CreatedBy = eEmployee.CreatedBy,
                 EmployeeId = eEmployee.EmployeeId,
@@ -146,7 +150,7 @@ namespace AndersonCRMFunction
                 Email = eEmployee.Email,
                 FirstName = eEmployee.FirstName,
                 LastName = eEmployee.LastName,
-                MiddleName = eEmployee.MiddleName           
+                MiddleName = eEmployee.MiddleName
             };
             return returnEmployee;
         }
