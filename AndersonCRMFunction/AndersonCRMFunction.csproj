@@ -52,7 +52,6 @@
     <Compile Include="FPeripheralType.cs" />
     <Compile Include="FJobTitle.cs" />
     <Compile Include="IFDepartment.cs" />
-    <Compile Include="IFEmployeeNumber.cs" />
     <Compile Include="IFEmployeeTeam.cs" />
     <Compile Include="IFEmployeeDepartment.cs" />
     <Compile Include="IFPeripheralType.cs" />

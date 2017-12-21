@@ -12,7 +12,8 @@ namespace AndersonCRMEntity
         
         public DateTime DateHired { get; set; }
         public DateTime DateStarted { get; set; }
-        public DateTime? DateEnded { get; set; }
+        //public DateTime? DateEnded { get; set; }
+
 
         [ForeignKey("Company")]
         public int CompanyId { get; set; }
@@ -28,7 +29,7 @@ namespace AndersonCRMEntity
         [StringLength(50)]
         public string Email { get; set; }
         [StringLength(250)]
-        public string FirstName { get; set; }        
+        public string FirstName { get; set; }
         [StringLength(250)]
         public string LastName { get; set; }
         [StringLength(250)]

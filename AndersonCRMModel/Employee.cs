@@ -8,21 +8,22 @@ namespace AndersonCRMModel
     {
        
         public DateTime DateHired { get; set; } 
-        public DateTime DateStarted { get; set; } 
-        public DateTime? DateEnded { get; set; } 
-         
+        public DateTime DateStarted { get; set; }
+        //public DateTime? DateEnded { get; set; } 
+        
+
         public string EmployeeNumber { get; set; } 
         public int TeamId { get; set; }  
         public int DepartmentId { get; set; } 
         public int CompanyId { get; set; } 
         public int EmployeeId { get; set; } 
         public int JobTitleId { get; set; } 
-        public int ManagerEmployeeId { get; set; } 
+        public int ManagerEmployeeId { get; set; }
 
-        public string Email { get; set; } 
-        public string FirstName { get; set; } 
-        public string LastName { get; set; } 
-        public string MiddleName { get; set; } 
+        public string Email { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string MiddleName { get; set; }
 
 
         public virtual Department Department { get; set; } 

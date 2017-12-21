@@ -85,7 +85,7 @@ namespace AndersonCRMFunction
                 CreatedDate = a.CreatedDate,
                 DateHired = a.DateHired,
                 DateStarted = a.DateStarted,
-                DateEnded = a.DateEnded,
+                //DateEnded = a.DateEnded,
                 UpdatedDate = a.UpdatedDate,
 
                 EmployeeNumber = a.EmployeeNumber,
@@ -110,7 +110,7 @@ namespace AndersonCRMFunction
                 CreatedDate = employee.CreatedDate,
                 DateHired = employee.DateHired,
                 DateStarted = employee.DateStarted,
-                DateEnded = employee.DateEnded,
+                //DateEnded = employee.DateEnded,
                 UpdatedDate = employee.UpdatedDate,
 
                 EmployeeNumber = employee.EmployeeNumber,
@@ -136,8 +136,14 @@ namespace AndersonCRMFunction
                 CreatedDate = eEmployee.CreatedDate,
                 DateHired = eEmployee.DateHired,
                 DateStarted = eEmployee.DateStarted,
-                DateEnded = eEmployee.DateEnded,
+                //DateEnded = eEmployee.DateEnded,
+                
+                FirstName = eEmployee.FirstName,
+                LastName = eEmployee.LastName,
+                MiddleName = eEmployee.MiddleName,
+                Email = eEmployee.Email,
                 UpdatedDate = eEmployee.UpdatedDate,
+                
 
                 EmployeeNumber = eEmployee.EmployeeNumber,
                 CompanyId = eEmployee.CompanyId,
@@ -147,10 +153,10 @@ namespace AndersonCRMFunction
                 ManagerEmployeeId = eEmployee.ManagerEmployeeId,
                 UpdatedBy = eEmployee.UpdatedBy,
 
-                Email = eEmployee.Email,
-                FirstName = eEmployee.FirstName,
-                LastName = eEmployee.LastName,
-                MiddleName = eEmployee.MiddleName
+                //Email = eEmployee.Email,
+                //FirstName = eEmployee.FirstName,
+                //LastName = eEmployee.LastName,
+                //MiddleName = eEmployee.MiddleName
             };
             return returnEmployee;
         }

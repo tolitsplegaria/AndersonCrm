@@ -6,7 +6,7 @@
 <div ng-controller="PeripheralController as model" ng-init="model.Initialise()">
     <div class="row">
         <div class="col-sm-4">
-            <a href="../Peripheral/Create" class="btn btn-default">Create</a>
+            <a href="../Asset/Create" class="btn btn-default">Create</a>
         </div>
     </div>
 
@@ -15,9 +15,9 @@
             <table class="table table-hover table-sm table-bordered ">
                 <thead>
                     <tr class="thead-inverse">
-                        <th>PeripheralId</th>
+                        <th>AssetId</th>
                         <th>EmployeeId</th>
-                        <th>PeripheralTypeId</th>
+                        <th>AssetTypeId</th>
 
                         <th>AssetTag</th>
                         <th>Description</th>
@@ -36,7 +36,7 @@
                 <tbody>
                     <tr class="clickableRow" ng-repeat="peripheral in model.Peripherals" ng-click="$event.originalEvent.dropdown || model.GoToUpdatePage(peripheral.PeripheralId)">
 
-                        <td><span ng-bind="peripheral.PeripheralId"></span></td>
+                        <td><span ng-bind="peripheral.AssetId"></span></td>
                         <td><span ng-bind="peripheral.EmployeeId"></span></td>
                         <td><span ng-bind="peripheral.PeripheralTypeId"></span></td>
                         <td><span ng-bind="peripheral.AssetTag"></span></td>
@@ -47,8 +47,8 @@
                         <td><span ng-bind="peripheral.CreatedBy"></span></td>
                         <td><span ng-bind="peripheral.UpdatedBy"></span></td>
 
-                        <td><span ng-bind="peripheral.CreateDate | date:'yyyy-MM-dd'"></span></td>
-                        <td><span ng-bind="peripheral.UpdateDate | date:'yyyy-MM-dd'"></span></td>
+                        <td><span ng-bind="peripheral.CreatedDate | date:'yyyy-MM-dd'"></span></td>
+                        <td><span ng-bind="peripheral.UpdatedDate | date:'yyyy-MM-dd'"></span></td>
                         
 
                         <td ng-click="$event.originalEvent.dropdown = true">
