@@ -10,10 +10,14 @@ namespace AndersonCRMFunction
     public class FEmployee : IFEmployee
     {
         private IDEmployee _iDEmployee;
+        
+
 
         public FEmployee()
         {
             _iDEmployee = new DEmployee();
+           
+
         }
 
         #region CREATE
@@ -46,11 +50,14 @@ namespace AndersonCRMFunction
             return Employees(eEmployees);
         }
 
+       
         public List<Employee> Read(int companyId, string sortBy)
         {
             List<EEmployee> eEmployees = _iDEmployee.Read<EEmployee>(a => a.CompanyId == companyId, sortBy);
             return Employees(eEmployees);
         }
+
+        
 
         public List<Employee> ReadAndersonPhEmployees()
         {
@@ -63,6 +70,10 @@ namespace AndersonCRMFunction
             List<EEmployee> eEmployees = _iDEmployee.Read<EEmployee>(a => a.AssetHistories.Any(b => b.AssetId == assetId), sortBy);
             return Employees(eEmployees);
         }
+
+        
+
+
 
         #endregion
 
@@ -92,6 +103,7 @@ namespace AndersonCRMFunction
                 DateHired = a.DateHired,
                 DateStarted = a.DateStarted,
                 UpdatedDate = a.UpdatedDate,
+                
 
                 EmployeeNumber = a.EmployeeNumber,
                 CompanyId = a.CompanyId,
@@ -117,6 +129,7 @@ namespace AndersonCRMFunction
                 DateHired = employee.DateHired,
                 DateStarted = employee.DateStarted,
                 UpdatedDate = employee.UpdatedDate,
+               
 
                 EmployeeNumber = employee.EmployeeNumber,
                 CompanyId = employee.CompanyId,
