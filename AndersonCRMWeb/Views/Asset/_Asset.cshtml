@@ -3,6 +3,7 @@
     Html.RenderPartial("_AuditColumns");
 }
 
+
 <div class="form-group" ng-controller="AssetTypeController as model" ng-init="model.InitialiseDropdown(@Model.AssetTypeId)">
     <label>AssetType Id</label>
     <ui-select  ng-model="model.AssetTypeId">
