@@ -25,8 +25,6 @@ namespace AndersonCRMEntity
 
         [StringLength(50)]
         public string EmployeeNumber { get; set; }
-        [StringLength(4)]
-        public string PIN { get; set; }
         [StringLength(50)]
         public string Email { get; set; }
         [StringLength(250)]

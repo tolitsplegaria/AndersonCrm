@@ -68,7 +68,7 @@ namespace AndersonCRMWeb.Controllers
         [HttpDelete]
         public JsonResult Delete(int id)
         {
-           
+
             _iFEmployee.Delete(id);
             return Json(string.Empty);
         }

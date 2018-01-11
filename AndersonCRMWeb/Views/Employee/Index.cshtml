@@ -15,18 +15,18 @@
             <table class="table table-hover table-sm table-bordered ">
                 <thead>
                     <tr class="thead-inverse">
-                        <th>EmployeeNumber</th>
+                        <th>Employee Number</th>
                         <th>Email</th>
-                        <th>FirstName</th>
-                        <th>LastName</th>
-                        <th>MiddleName</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Middle Name</th>
 
-                        <th>CompanyName</th>
-                        <th>JobTitleName</th>
+                        <th>Company Name</th>
+                        <th>Job Title Name</th>
                         <th>Manager</th>
 
-                        <th>DateHired</th>
-                        <th>DateStarted</th>
+                        <th>Date Hired</th>
+                        <th>Date Started</th>
 
                         <th>Actions</th>
                     </tr>
@@ -58,7 +58,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" ng-click="model.GoToUpdatePage(employee.EmployeeId)">Edit</a></li>
-                                    <li><a href="#" ng-click="model.Delete(employee.EmployeeId)">Delete</a></li>
+                                    <li><a href="#" ng-click="model.Delete(employee.EmployeeId)" onclick="javascript: confirm('Are you sure you want to delete?') ? model.Delete(employee.EmployeeId) : false">Delete</a></li>
                                 </ul>
                             </div>
                         </td>
