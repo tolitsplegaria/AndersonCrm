@@ -171,5 +171,10 @@ namespace AndersonCRMFunction
             };
             return returnEmployee;
         }
+
+        public Employee Read(string employeeNumber)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
