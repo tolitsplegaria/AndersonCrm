@@ -951,6 +951,7 @@
     <Content Include="bower_components\tether\src\js\utils.js" />
     <Content Include="Content\Images\aga.png" />
     <Content Include="Content\Images\anderson.jpg" />
+    <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Images\front.png" />
     <Content Include="Content\Images\intranet.png" />
     <Content Include="Content\Images\lp.png" />

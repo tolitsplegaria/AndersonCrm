@@ -58,7 +58,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" ng-click="model.GoToUpdatePage(asset.AssetId)">Edit</a></li>
-                                    <li><a href="#" ng-click="model.Delete(asset.AssetId)">Delete</a></li>
+                                    <li><a href="#" ng-click="model.Delete(asset.AssetId)" onclick="confirm('Are you sure you want to delete?') ? model.Delete(asset.AssetId) : false">Delete</a></li>
                                 </ul>
                             </div>
                         </td>
