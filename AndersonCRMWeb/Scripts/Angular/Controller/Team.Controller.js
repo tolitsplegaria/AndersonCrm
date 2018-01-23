@@ -51,20 +51,24 @@
         }
 
         function Delete(teamId) {
-            TeamService.Delete(teamId)
-                .then(function (response) {
-                    Read();
-                })
-                .catch(function (data, status) {
-                    new PNotify({
-                        title: status,
-                        text: data,
-                        type: 'error',
-                        hide: true,
-                        addclass: "stack-bottomright"
-                    });
-                });
-        }
+                var conf = window.confirm("Are you sure you want to delete?");
+                if (conf == true) {
+                    TeamService.Delete(teamId)
+                        .then(function (response) {
+                            Read();
+                        })
+                        .catch(function (data, status) {
+                            new PNotify({
+                                title: status,
+                                text: data,
+                                type: 'error',
+                                hide: true,
+                                addclass: "stack-bottomright"
+                            });
+                        });
+                }
+                else { return false; }
+            }
 
-    }
-})();
+        }
+    })();

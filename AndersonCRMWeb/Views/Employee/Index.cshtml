@@ -3,23 +3,6 @@
     ViewBag.Title = "Index";
 }
 
-
-<script>
-    function ConfirmDelete() {
-        var x = confirm("Are you sure you want to delete?");
-        if (x == true)
-        {
-            model.Delete(employee.EmployeeId);
-            return true;
-        }   
-        else
-        {
-            alert('DOnt delete');
-            return false;
-        }
-            
-    }
-</script>
 <div ng-controller="EmployeeController as model" ng-init="model.Initialise()">
     <div class="row">
         <div class="col-sm-4">
@@ -77,7 +60,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" ng-click="model.GoToUpdatePage(employee.EmployeeId)">Edit</a></li>
-                                    <li><a href="#" ng-click="model.Delete(employee.EmployeeId)" onclick="ConfirmDelete()">Delete</a></li>
+                                    <li><a href="#" ng-click="model.Delete(employee.EmployeeId)">Delete</a></li>
                                 </ul>
                             </div>
                         </td>
