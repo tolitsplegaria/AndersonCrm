@@ -6,7 +6,7 @@
 
 <div class="form-group">
     <label for="EmployeeNumber">Employee Number</label>
-    <input type="text" class="form-control" id="EmployeeNumber" name="EmployeeNumber" placeholder="EmployeeNumber" value="@Model.EmployeeNumber">
+    <input type="text" class="form-control" id="EmployeeNumber" name="EmployeeNumber" placeholder="Employee Number" value="@Model.EmployeeNumber">
 </div>
 
 <div class="form-group">
@@ -16,15 +16,15 @@
 
 <div class="form-group">
     <label for="FirstName">First Name</label>
-    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="FirstName" value="@Model.FirstName" required >
+    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First Name" value="@Model.FirstName" required >
 </div>
 <div class="form-group">
     <label for="LastName">Last Name</label>
-    <input type="text" class="form-control" id="LastName" name="LastName" placeholder="LastName" value="@Model.LastName" required>
+    <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Last Name" value="@Model.LastName" required>
 </div>
 <div class="form-group">
     <label for="MiddleName">Middle Name</label>
-    <input type="text" class="form-control" id="MiddleName" name="MiddleName" placeholder="MiddleName" value="@Model.MiddleName" required>
+    <input type="text" class="form-control" id="MiddleName" name="MiddleName" placeholder="Middle Name" value="@Model.MiddleName" required>
 </div>
 
 <div class="form-group">
@@ -103,17 +103,17 @@
 
 <div class="form-group">
     <label for="DateHired">Date Hired</label>
-    <input type="date" class="form-control" id="DateHired" name="DateHired" placeholder="DateHired" value="@Model.DateHired.ToString("yyyy-MM-dd")">
+    <input type="date" class="form-control" id="DateHired" name="DateHired" min="2010-01-01" placeholder="DateHired" value="@Model.DateHired.ToString("yyyy-MM-dd")">
 </div>
 
 <div class="form-group">
     <label for="DateStarted">Date Started</label>
-    <input type="date" class="form-control" id="DateStarted" name="DateStarted"  min="01-01-2000" placeholder="DateStarted" value="@Model.DateStarted.ToString("yyyy-MM-dd")" >
+    <input type="date" class="form-control" id="DateStarted" name="DateStarted"  min="2010-01-01" placeholder="DateStarted" value="@Model.DateStarted.ToString("yyyy-MM-dd")" >
 </div>
 
 <div class="form-group">
     <label for="DateEnded">DateEnded</label>
-    <input type="date" class="form-control" id="DateEnded" name="DateEnded" min="01-01-2000"  placeholder="DateEnded" value="@(Model.DateEnded?.ToString("yyyy-MM-dd") ?? "")">
+    <input type="date" class="form-control" id="DateEnded" name="DateEnded" min="2010-01-01"  placeholder="DateEnded" value="@(Model.DateEnded?.ToString("yyyy-MM-dd") ?? "")">
 </div>
 
 <div class="form-group">
