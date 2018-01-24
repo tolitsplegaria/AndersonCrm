@@ -13,22 +13,23 @@
     <label for="Email">Email</label>
     <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" value="@Model.Email">
 </div>
+
 <div class="form-group">
     <label for="FirstName">First Name</label>
-    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="FirstName" value="@Model.FirstName">
+    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="FirstName" value="@Model.FirstName" required >
 </div>
 <div class="form-group">
     <label for="LastName">Last Name</label>
-    <input type="text" class="form-control" id="LastName" name="LastName" placeholder="LastName" value="@Model.LastName">
+    <input type="text" class="form-control" id="LastName" name="LastName" placeholder="LastName" value="@Model.LastName" required>
 </div>
 <div class="form-group">
     <label for="MiddleName">Middle Name</label>
-    <input type="text" class="form-control" id="MiddleName" name="MiddleName" placeholder="MiddleName" value="@Model.MiddleName">
+    <input type="text" class="form-control" id="MiddleName" name="MiddleName" placeholder="MiddleName" value="@Model.MiddleName" required>
 </div>
 
 <div class="form-group">
     <label for="Pin">Pin</label>
-    <input type="password" class="form-control" id="Pin " name="Pin" maxlength="4" placeholder="Pin Number" value="@Model.Pin ">
+    <input type="password" class="form-control" id="Pin " name="Pin" maxlength="4" placeholder="Pin Number" value="@Model.Pin " required>
 </div>
 
 <div class="form-group" ng-controller="CompanyController as model" ng-init="model.InitialiseDropdown(@Model.CompanyId)">
@@ -41,7 +42,7 @@
             <span ng-bind="company.Name"></span>
         </ui-select-choices>
     </ui-select>
-    <input type="hidden" class="form-control" name="CompanyId" value="{{model.Company.CompanyId}}">
+    <input type="hidden" class="form-control" name="CompanyId" value="{{model.Company.CompanyId}}" >
 </div>
 
 <div class="form-group" ng-controller="DepartmentController as model" ng-init="model.InitialiseDropdown(@Model.DepartmentId)">
@@ -55,7 +56,7 @@
             <span ng-bind="department.Name"></span>
         </ui-select-choices>
     </ui-select>
-    <input type="hidden" class="form-control" name="Department" value="{{model.Department.DepartmentId}}">
+    <input type="hidden" class="form-control" name="Department" value="{{model.Department.DepartmentId}}" >
 </div>
 
 <div class="form-group" ng-controller="TeamController as model" ng-init="model.InitialiseDropdown(@Model.TeamId)">
@@ -69,7 +70,7 @@
             <span ng-bind="team.Name"></span>
         </ui-select-choices>
     </ui-select>
-    <input type="hidden" class="form-control" name="Team" value="{{model.Team.TeamId}}">
+    <input type="hidden" class="form-control" name="Team" value="{{model.Team.TeamId}}" >
 </div>
 
 <div class="form-group" ng-controller="JobTitleController as model" ng-init="model.InitialiseDropdown(@Model.JobTitleId)">
@@ -82,7 +83,7 @@
             <span ng-bind="jobTitle.Name"></span>
         </ui-select-choices>
     </ui-select>
-    <input type="hidden" class="form-control" name="JobTitleId" value="{{model.JobTitle.JobTitleId}}">
+    <input type="hidden" class="form-control" name="JobTitleId" value="{{model.JobTitle.JobTitleId}}" >
 </div>
 
 <div class="form-group" ng-controller="EmployeeController as model" ng-init="model.InitialiseDropdown(@Model.EmployeeId)">
@@ -104,14 +105,15 @@
     <label for="DateHired">Date Hired</label>
     <input type="date" class="form-control" id="DateHired" name="DateHired" placeholder="DateHired" value="@Model.DateHired.ToString("yyyy-MM-dd")">
 </div>
+
 <div class="form-group">
     <label for="DateStarted">Date Started</label>
-    <input type="date" class="form-control" id="DateStarted" name="DateStarted" placeholder="DateStarted" value="@Model.DateStarted.ToString("yyyy-MM-dd")">
+    <input type="date" class="form-control" id="DateStarted" name="DateStarted"  min="01-01-2000" placeholder="DateStarted" value="@Model.DateStarted.ToString("yyyy-MM-dd")" >
 </div>
 
 <div class="form-group">
     <label for="DateEnded">DateEnded</label>
-    <input type="date" class="form-control" id="DateEnded" name="DateEnded" placeholder="DateEnded" value="@(Model.DateEnded?.ToString("yyyy-MM-dd") ?? "")">
+    <input type="date" class="form-control" id="DateEnded" name="DateEnded" min="01-01-2000"  placeholder="DateEnded" value="@(Model.DateEnded?.ToString("yyyy-MM-dd") ?? "")">
 </div>
 
 <div class="form-group">
