@@ -9,6 +9,7 @@ namespace AndersonCRMEntity
     [Table("Employee")]
     public class EEmployee: EBase
     {
+        
         public DateTime DateHired { get; set; }
         public DateTime DateStarted { get; set; }
         public DateTime? DateEnded { get; set; }

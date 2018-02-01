@@ -90,6 +90,7 @@ namespace AndersonCRMFunction
         #region DELETE
         public void Delete(int assetId)
         {
+            
             _iDAsset.Delete<EAssetHistory>(a => a.AssetId == assetId);
             _iDAsset.Delete<EAsset>(a => a.AssetId == assetId);
         }

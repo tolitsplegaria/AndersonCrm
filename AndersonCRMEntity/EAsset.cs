@@ -19,6 +19,7 @@ namespace AndersonCRMEntity
         public int AssetTypeId { get; set; }
 
 
+
         [StringLength(50)]
         public string AssetTag { get; set; }
         [StringLength(250)]
