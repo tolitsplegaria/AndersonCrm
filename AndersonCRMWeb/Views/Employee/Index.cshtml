@@ -16,19 +16,20 @@
             <table class="table table-hover table-sm table-bordered ">
                 <thead>
                     <tr class="thead-inverse">
-                        <th>EmployeeNumber</th>
+                        <th>Employee Number</th>
                         <th>Email</th>
                         <th>FirstName</th>
-                        <th>LastName</th>
-                        <th>MiddleName</th>
+                        <th>Last Name</th>
+                        <th>Middle Name</th>
 
-                        <th>CompanyName</th>
-                        <th>JobTitleName</th>
+                        <th>Company Name</th>
+                        <th>JobTitle Name</th>
                         <th>Manager</th>
 
-                        <th>DateHired</th>
-                        <th>DateStarted</th>
-                        <th>DateEnded</th>
+                        <th>Date Hired</th>
+                        <th>Date Started</th>
+                        <th>Date Ended</th>
+                        <th>Asset Assigned</th>
 
                         <th>Actions</th>
                     </tr>
@@ -53,6 +54,7 @@
                         <td><span ng-bind="employee.DateHired | date:'yyyy-MM-dd'"></span></td>
                         <td><span ng-bind="employee.DateStarted | date:'yyyy-MM-dd'"></span></td>
                         <td><span ng-bind="employee.DateEnded | date:'yyyy-MM-dd'"></span></td>
+                        <td><span ng-bind=""></span></td>
                         <td ng-click="$event.originalEvent.dropdown = true">
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">

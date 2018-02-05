@@ -16,8 +16,8 @@
                 <thead>
                     <tr class="thead-inverse">
                         <th>Asset Id</th>
-                        <th>Employee Id</th>
-                        <th>Asset TypeId</th>
+                        <th>Employee </th>
+                        <th>Asset Type</th>
 
                         <th>Asset Tag</th>
                         <th>Description</th>
@@ -37,8 +37,12 @@
                     <tr class="clickableRow" ng-repeat="asset in model.Assets" ng-click="$event.originalEvent.dropdown || model.GoToUpdatePage(asset.AssetId)">
 
                         <td><span ng-bind="asset.AssetId"></span></td>
-                        <td><span ng-bind="asset.EmployeeId"></span></td>
-                        <td><span ng-bind="asset.AssetTypeId"></span></td>
+                        <td>
+                            <span ng-bind="asset.Employee.FirstName"></span>
+                            <span ng-bind="asset.Employee.MiddleName"></span>
+                            <span ng-bind="asset.Employee.LastName"></span>
+                        </td>
+                        <td><span ng-bind="asset.AssetType.Name"></span></td>
                         <td><span ng-bind="asset.AssetTag"></span></td>
                         <td><span ng-bind="asset.Description"></span></td>
                         <td><span ng-bind="asset.Name"></span></td>
