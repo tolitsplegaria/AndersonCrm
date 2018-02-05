@@ -4,20 +4,17 @@ using AndersonCRMEntity;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using System.Linq.Expressions;
 
 namespace AndersonCRMFunction
 {
     public class FEmployee : IFEmployee
     {
         private IDEmployee _iDEmployee;
-        
-
 
         public FEmployee()
         {
             _iDEmployee = new DEmployee();
-           
-
         }
 
         #region CREATE
@@ -64,14 +61,11 @@ namespace AndersonCRMFunction
             return Employees(eEmployees);
         }
 
-
         public List<Employee> Read(int companyId, string sortBy)
         {
             List<EEmployee> eEmployees = _iDEmployee.Read<EEmployee>(a => a.CompanyId == companyId, sortBy);
             return Employees(eEmployees);
         }
-
-        
 
         public List<Employee> ReadAndersonPhEmployees()
         {
@@ -85,9 +79,19 @@ namespace AndersonCRMFunction
             return Employees(eEmployees);
         }
 
-        
+        public List<Employee> Read(EmployeeFilter employeeFilter)
+        {
+            Expression<Func<EEmployee, bool>> predicate =
+                a => (a.FirstName.Contains(employeeFilter.Name) || a.MiddleName.Contains(employeeFilter.Name)) || a.LastName.Contains(employeeFilter.Name)
+                || employeeFilter.Name == null;
 
+            //Expression<Func<EEmployee, bool>> predicate =
+            //   a => (a.DateEnded >= employeeFilter.DateFrom)
+            //   || (a.DateEnded < employeeFilter.DateTo);
 
+            List<EEmployee> eEmployees = _iDEmployee.List(predicate);
+            return Employees(eEmployees);
+        }
 
         #endregion
 
@@ -118,7 +122,6 @@ namespace AndersonCRMFunction
                 DateStarted = a.DateStarted,
                 DateEnded = a.DateEnded,
                 UpdatedDate = a.UpdatedDate,
-                
 
                 EmployeeNumber = a.EmployeeNumber,
                 CompanyId = a.CompanyId,
@@ -145,7 +148,6 @@ namespace AndersonCRMFunction
                 DateStarted = employee.DateStarted,
                 DateEnded = employee.DateEnded,
                 UpdatedDate = employee.UpdatedDate,
-               
 
                 EmployeeNumber = employee.EmployeeNumber,
                 CompanyId = employee.CompanyId,
