@@ -14,7 +14,7 @@
             <span ng-bind="assetType.Name"></span>
         </ui-select-choices>
     </ui-select>
-    <input type="hidden" class="form-control" id="AssetTypeId" name="AssetTypeId" placeholder="AssetTypeId" value="@Model.AssetTypeId">
+    <input type="hidden" class="form-control" id="AssetTypeId" name="AssetTypeId" placeholder="AssetTypeId" value="{{model.AssetType.AssetTypeId}}">
 </div>
 
 <div class="form-group" ng-controller="EmployeeController as model" ng-init="model.InitialiseDropdown(@Model.EmployeeId)">
@@ -29,9 +29,7 @@
             <span ng-bind="employee.LastName"></span>
         </ui-select-choices>
     </ui-select>
-    <input type="hidden" class="form-control" id="EmployeeId" name="EmployeeId" placeholder="EmployeeId" value="@Model.EmployeeId">
-</div>
- 
+    <input type="hidden" class="form-control" id="EmployeeId" name="EmployeeId" placeholder="EmployeeId" value="{{model.Employee.EmployeeId}}">
 <div class="form-group">
     <label for="AssetTag">AssetTag</label>
     <input type="text" class="form-control" id="AssetTag" name="AssetTag" placeholder="AssetTag" value="@Model.AssetTag">
