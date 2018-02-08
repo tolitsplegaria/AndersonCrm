@@ -7,6 +7,8 @@ namespace AndersonCRMModel
 {
     public class Employee : Base
     {
+        public string Url;
+
         public DateTime DateHired { get; set; }
         public DateTime DateStarted { get; set; }
         public DateTime? DateEnded { get; set; }
@@ -31,6 +33,7 @@ namespace AndersonCRMModel
         public virtual Company Company { get; set; }
         public virtual JobTitle JobTitle { get; set; }
         public virtual Team Team { get; set; }
+        //public HttpPostedFileBase Url { get; set; }
 
         public virtual ICollection<EmployeeDepartment> EmployeeDepartments { get; set; }
         public virtual ICollection<EmployeeTeam> EmployeeTeams { get; set; }

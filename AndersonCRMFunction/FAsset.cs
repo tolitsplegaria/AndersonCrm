@@ -23,8 +23,8 @@ namespace AndersonCRMFunction
             EAsset eAsset = EAsset(asset);
             eAsset.CreatedDate = DateTime.Now;
             eAsset.CreatedBy = createdBy;
-            eAsset.AssetTypeId = 1;
-            eAsset.EmployeeId = 1;
+            //eAsset.AssetTypeId = 1;
+            //eAsset.EmployeeId = 1;
             
             eAsset = _iDAsset.Create(eAsset);
 
@@ -90,6 +90,7 @@ namespace AndersonCRMFunction
         #region DELETE
         public void Delete(int assetId)
         {
+            
             _iDAsset.Delete<EAssetHistory>(a => a.AssetId == assetId);
             _iDAsset.Delete<EAsset>(a => a.AssetId == assetId);
         }

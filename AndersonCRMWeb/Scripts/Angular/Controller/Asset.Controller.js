@@ -11,9 +11,7 @@
         var vm = this;
 
         vm.AssetId;
-
         vm.Asset;
-
         vm.Assets = [];
         vm.AssetTypes = [];
         vm.Employees = [];
